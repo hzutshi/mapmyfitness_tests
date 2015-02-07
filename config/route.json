@@ -1,0 +1,96 @@
+{
+"Night_Route": {
+    "data_source": "via laptop :)",
+    "description": "test route around cedar park",
+    "starting_location": {
+        "type": "Point",
+        "coordinates": [
+            -97.793984,
+            30.492286
+        ]
+    },
+    "start_point_type": "home",
+    "points": [
+        {
+            "lat": 30.494320,
+            "lng": -97.788405,
+            "_links": {
+                "marker_icon": [
+                    {
+                        "href": "http://static.mapmyfitness.com/d/mapping_api/stable/img/markers/school.png",
+                        "id": "2017",
+                        "desc": "School"
+                    }
+                ]
+            },
+            "notes": "Abacus School",
+            "order": "0"
+        },
+        {
+            "lat": 30.497371,
+            "lng": -97.776368,
+            "_links": {
+                "marker_icon": [
+                    {
+                        "href": "http://static.mapmyfitness.com/d/mapping_api/stable/img/markers/school.png",
+                        "id": "2017",
+                        "desc": "Restaurant"
+                    }
+                ]
+            },
+            "notes": "Z-Tejas",
+            "order": "1"
+        }
+    ],
+    "postal_code": "78757",
+    "name": "night route"
+  },
+
+  "Night_Route_Sammamish": {
+    "total_descent": null,
+    "city": "Sammamish",
+    "data_source": null,
+    "description": "test route around Sammamish",
+    "updated_datetime": "2015-02-02T04:59:24+00:00",
+    "created_datetime": "2015-02-02T04:59:07+00:00",
+    "country": "us",
+    "start_point_type": "home",
+    "starting_location": {
+        "type": "Point",
+        "coordinates": [-121.988411, 47.590148]
+    },
+    "distance": 1203.5067690267,
+    "name": "night route",
+    "climbs": null,
+    "state": "WA",
+    "points": [{
+        "lat": 47.590798,
+        "lng": -121.974324,
+        "dis": 0.0,
+        "_links": {
+            "marker_icon": [{
+                "href": "http:\/\/static.mapmyfitness.com\/d\/mapping_api\/stable\/img\/markers\/police.png",
+                "id": "2017",
+                "desc": "School"
+            }]
+        },
+        "ele": 272.06
+    }, {
+        "lat": 47.586109,
+        "lng": -121.972607,
+        "dis": 0.0,
+        "_links": {
+            "marker_icon": [{
+                "href": "http:\/\/static.mapmyfitness.com\/d\/mapping_api\/stable\/img\/markers\/police.png",
+                "id": "2017",
+                "desc": "Police"
+            }]
+        },
+        "ele": 273.31
+    }],
+    "postal_code": "98075",
+    "min_elevation": 272.06,
+    "max_elevation": 273.31,
+    "total_ascent": null
+  }
+}

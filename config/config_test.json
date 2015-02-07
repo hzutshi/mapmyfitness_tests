@@ -1,0 +1,19 @@
+{
+
+  "url": "https://oauth2-api.mapmyapi.com",
+
+  "version": "/v7.0",
+
+  "path": {
+    "AuthenticatedUser": "/user/self/",
+    "User": "/user/",
+    "Route" : "/route/",
+    "RouteBookmark" : "/root_bookmark/"
+  },
+
+  "TestUser1" : {
+    "Api-Key": "j2sfeh5f8xjvma298egt394sz2ngs6we",
+    "Authorization": "Bearer 0b3378b9b840dea8b9073ff486e2c25cdf6ebcca",
+    "Content-Type": "application/json"
+  }
+}
