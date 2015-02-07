@@ -28,14 +28,15 @@ class MmfBase(object):
         """
         Converts a json object to python object with dict keys as attributes
 
-        :param data: json data to be used
+        :param data: json data to be used for conversion
         :return:
         """
         return json.loads(data, object_hook=MmfBase._json_object_hook)
 
     @staticmethod
     def setup_logging(
-            default_path=None, default_level=logging.INFO, env_key='LOG_CFG'):
+            default_path=None, file_name='logging.json',
+            default_level=logging.INFO, env_key='LOG_CFG'):
         """
         Setup logging using the supplied parameters
 
@@ -52,7 +53,7 @@ class MmfBase(object):
         if value:
             path = value
         if path is None:
-            path = os.path.join(Configuration.config_path(), 'logging.json')
+            path = os.path.join(Configuration.config_path(), file_name)
         if os.path.exists(path):
             file_config = Configuration.load_json_file_config(path)
             config.dictConfig(file_config)

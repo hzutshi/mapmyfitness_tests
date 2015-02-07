@@ -8,6 +8,7 @@ class Configuration:
         Configuration class loads test configuration from the json file in the
         config folder
     """
+    path = '../../config'
 
     def __init__(self, file_name):
         """
@@ -40,7 +41,7 @@ class Configuration:
         :return:
         """
         return os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                            '../../config')
+                            Configuration.path)
 
     def get_user_auth_headers(self, user):
         """
