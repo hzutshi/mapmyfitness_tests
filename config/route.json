@@ -2,6 +2,7 @@
 "Night_Route": {
     "data_source": "via laptop :)",
     "description": "test route around cedar park",
+    "state": "WA",
     "starting_location": {
         "type": "Point",
         "coordinates": [
@@ -60,7 +61,7 @@
         "coordinates": [-121.988411, 47.590148]
     },
     "distance": 1203.5067690267,
-    "name": "night route",
+    "name": "night route sammamish",
     "climbs": null,
     "state": "WA",
     "points": [{

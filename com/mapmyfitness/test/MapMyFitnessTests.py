@@ -4,12 +4,15 @@ from com.mapmyfitness.Configuration import Configuration
 from com.mapmyfitness.RouteHelper import RouteHelper
 from com.mapmyfitness.UserHelper import UserHelper
 
+test_data = ['config_test.json']
 
 @Vows.batch
 class MapMyFitnessTests(Vows.Context):
 
+
     def topic(self):
-        return Configuration('config_test.json')
+        for config in test_data:
+            yield Configuration(config)
 
     class AsAUserIWantTo(Vows.Context):
 
@@ -53,7 +56,9 @@ class MapMyFitnessTests(Vows.Context):
                 def topic(self, route_helper):
                     ids = RouteHelper.get_route_id_list_from_response(
                         route_helper.get_routes_for_user(
-                            'TestUser1', additional_parameters={'limit': '1000'}
+                            'TestUser1',
+                            additional_parameters={
+                                'state':'TX', 'limit':1000}
                         ))
                     route_info = dict()
                     route_info['route_helper'] = route_helper
@@ -83,7 +88,7 @@ class MapMyFitnessTests(Vows.Context):
                         ids = RouteHelper.get_route_id_list_from_response(
                             route_helper['route_helper'].get_routes_for_user(
                                 'TestUser1', additional_parameters={
-                                    'limit': '1000'}))
+                                    'state':'WA','limit': '1000'}))
                         route_helper['route_ids'] = ids
 
                         return route_helper
@@ -112,7 +117,9 @@ class MapMyFitnessTests(Vows.Context):
                         def topic(self, route_helper):
                             ids = RouteHelper.get_route_id_list_from_response(
                                 route_helper['route_helper'].get_routes_for_user(
-                                    'TestUser1', additional_parameters={'limit':'1000'}))
+                                    'TestUser1',
+                                    additional_parameters={
+                                        'state':'WA', 'limit':1000}))
 
                             route_helper['route_ids'] = ids
 

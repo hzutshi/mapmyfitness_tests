@@ -226,3 +226,8 @@ class RouteHelper(MmfBase):
                 return None
         else:
             raise RuntimeError("Route entry name cannot be none")
+
+c = Configuration('config_test.json')
+h = RouteHelper(c)
+h.add_route_to_user('TestUser1', 'Night_Route')
+print h.get_routes_for_user('TestUser1', additional_parameters={'state':'TX', 'limit':1000})

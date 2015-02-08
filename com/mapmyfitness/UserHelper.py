@@ -1,6 +1,5 @@
 import json
 import requests
-from com.mapmyfitness.Configuration import Configuration
 from com.mapmyfitness.MmfBase import MmfBase
 
 import logging
